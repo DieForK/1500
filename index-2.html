@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<meta name="description" content="Hein Yar Zar Oo နှင့် Khin Myoet Yee တို့အတွက် ချစ်ခြင်းမေတ္တာနဲ့ ဖန်တီးထားတဲ့ website လေး။">
+<title>Hein Yar Zar Oo ♡ Khin Myoet Yee</title>
+<style>
+:root{--pink:#e85d91;--deep:#9d315e;--pale:#fff0f5;--cream:#fffafc;--ink:#512b3c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Myanmar",sans-serif;background:linear-gradient(180deg,#fff5f8,#fffafd 48%,#ffeaf2);color:var(--ink);overflow-x:hidden}
+a{color:inherit}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:13px 10px;background:#fff8fbe8;backdrop-filter:blur(12px);border-bottom:1px solid #f6d4e1}
+nav a{text-decoration:none;font-size:.9rem;font-weight:650;color:#9d315e}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 20px 65px;position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:7% 5%;border-radius:45% 45% 30% 30%;background:radial-gradient(ellipse at center,#ffdce8 0%,#ffeaf2a8 48%,transparent 72%);z-index:-1}
+.eyebrow{letter-spacing:3px;text-transform:uppercase;font-size:.75rem;color:#b44b75}
+h1{font-family:Georgia,serif;font-size:clamp(2.4rem,9vw,5.5rem);line-height:1.05;margin:20px 0;color:var(--deep);font-weight:600}
+.amp{color:var(--pink);font-style:italic}
+.hero p{max-width:520px;margin:0 auto 25px;line-height:1.9;color:#805267}
+.btn{display:inline-block;border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#ed6d9e,#c83e78);color:white;text-decoration:none;font-weight:700;box-shadow:0 8px 22px #e85d9138;cursor:pointer;font:inherit}
+.btn.secondary{background:#fff;color:#ad3d6c;border:1px solid #f2bfd2;box-shadow:none}
+section{padding:65px 18px;max-width:900px;margin:auto}
+.section-title{text-align:center;font-family:Georgia,serif;color:var(--deep);font-size:clamp(2rem,6vw,3rem);margin:0 0 12px}
+.section-intro{text-align:center;color:#95667b;line-height:1.8;max-width:600px;margin:0 auto 30px}
+.card{background:#ffffffc9;border:1px solid #f5d5e1;border-radius:24px;padding:25px;box-shadow:0 12px 35px #b43c6910}
+.story{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.story article{text-align:center;padding:22px 14px}
+.story .emoji{font-size:2rem}
+.story h3{color:#a83e6b;margin:12px 0 8px}
+.story p{font-size:.94rem;line-height:1.8;color:#82576b;margin:0}
+.letter{max-width:690px;margin:auto;text-align:center;line-height:2;font-size:1.03rem;background:#fff9fc;border:1px solid #f3c9d9;border-radius:28px;padding:clamp(22px,6vw,45px);box-shadow:0 15px 45px #b43c6910}
+.letter .big-heart{font-size:2.5rem}
+.counter{text-align:center}
+.counter input{max-width:100%;width:210px;padding:12px;border:1px solid #edc1d2;border-radius:12px;background:#fff;color:var(--ink);font:inherit}
+.counter-output{font-family:Georgia,serif;font-size:1.4rem;color:var(--deep);margin:20px 0 8px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.photo{min-height:145px;border:1.5px dashed #e7a6bf;border-radius:20px;background:linear-gradient(145deg,#fff8fb,#ffe2ec);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:15px;color:#a14d70;cursor:pointer;overflow:hidden}
+.photo span{font-size:2.3rem}.photo small{margin-top:8px;line-height:1.5}
+.photo img{width:100%;height:100%;min-height:180px;object-fit:cover;border-radius:17px}
+#photoInput{display:none}
+.promise{text-align:center}
+.promise p{line-height:1.9}
+footer{text-align:center;padding:35px 15px 45px;color:#9a6279;font-size:.9rem}
+.floating{position:fixed;bottom:18px;right:18px;z-index:4;width:48px;height:48px;border-radius:50%;border:0;background:#e85d91;color:white;font-size:1.2rem;box-shadow:0 8px 20px #e85d9140;cursor:pointer}
+.heart{position:fixed;pointer-events:none;z-index:10;animation:floatUp 2.8s ease-out forwards}
+@keyframes floatUp{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:1}100%{transform:translateY(-110vh) rotate(25deg) scale(1.3);opacity:0}}
+@media(max-width:650px){nav{gap:12px}nav a{font-size:.82rem}.hero{min-height:80vh}.story{grid-template-columns:1fr}.story article{padding:20px}.gallery{grid-template-columns:1fr 1fr}section{padding:52px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.heart{animation:none;display:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main navigation">
+<a href="#home">Home</a><a href="#story">Our Story</a><a href="#letter">Love Letter</a><a href="#memories">Memories</a><a href="#promise">Promise</a>
+</nav>
+<header class="hero" id="home">
+<div>
+<div class="eyebrow">A little website, a lot of love</div>
+<h1>Hein Yar Zar Oo<br><span class="amp">♡</span><br>Khin Myoet Yee</h1>
+<p>ကမ္ဘာကြီး ဘယ်လောက်ပဲ ကျယ်ဝန်းနေပါစေ၊ ကိုယ်တို့နှစ်ယောက်ရဲ့ အမှတ်တရလေးတွေကတော့ ကိုယ်တို့အတွက် အမြဲတမ်း ထူးခြားနေမှာပါ။ 💗</p>
+<a class="btn" href="#letter">အချစ်စာလေး ဖတ်မယ် ♡</a>
+</div>
+</header>
+<main>
+<section id="story">
+<h2 class="section-title">Our Little Love Story</h2>
+<p class="section-intro">အချစ်ဆိုတာ ကြီးကျယ်တဲ့အရာတွေချည်း မဟုတ်ပါဘူး။ နေ့စဉ်ဘဝထဲက သေးငယ်တဲ့ ဂရုစိုက်မှုလေးတွေကလည်း အချစ်ပါပဲ။</p>
+<div class="story">
+<article class="card"><div class="emoji">🌷</div><h3>How It Started</h3><p>စတင်တွေ့ဆုံခဲ့တဲ့အချိန်လေးကို ပြန်တွေးတိုင်း ပြုံးမိစေတဲ့ အမှတ်တရတစ်ခုအဖြစ် သိမ်းထားမယ်။</p></article>
+<article class="card"><div class="emoji">💌</div><h3>Little Moments</h3><p>စကားပြောခဲ့တဲ့ညတွေ၊ ရယ်မောခဲ့တဲ့အချိန်တွေ၊ အားပေးခဲ့တဲ့စကားလေးတွေ—အားလုံးက တန်ဖိုးရှိတယ်။</p></article>
+<article class="card"><div class="emoji">✨</div><h3>Our Tomorrow</h3><p>အနာဂတ်ကို တစ်နေ့ချင်း တည်ဆောက်သွားမယ်။ နားလည်မှု၊ ယုံကြည်မှုနဲ့ အပြန်အလှန် လေးစားမှုတွေကို ရွေးချယ်မယ်။</p></article>
+</div>
+</section>
+<section id="letter">
+<h2 class="section-title">A Letter For You</h2>
+<p class="section-intro">Hein Yar Zar Oo က Khin Myoet Yee အတွက် 💗</p>
+<div class="letter">
+<div class="big-heart">💗</div>
+<p>ချစ်ရတဲ့ Khin Myoet Yee ရေ…</p>
+<p>ဒီ Website လေးက မင်းကို ကိုယ်ဘယ်လောက်တန်ဖိုးထားလဲဆိုတာ ပြောပြချင်လို့ ဖန်တီးထားတဲ့ အမှတ်တရလေးပါ။ မင်းနဲ့အတူ ရယ်မောရတဲ့အချိန်တွေ၊ တစ်ယောက်ကိုတစ်ယောက် နားထောင်ပေးတဲ့အချိန်တွေက ကိုယ့်အတွက် အဖိုးတန်ပါတယ်။</p>
+<p>အမြဲတမ်း အရာရာအဆင်ပြေနေမယ်လို့ မပြောနိုင်ပေမယ့် အခက်အခဲတွေကြုံလာတဲ့အခါ တစ်ယောက်ကိုတစ်ယောက် နားလည်ဖို့၊ ရိုးသားဖို့နဲ့ လေးစားဖို့ ကြိုးစားကြမယ်နော်။ မင်းရဲ့အိပ်မက်တွေကိုလည်း ကိုယ်တန်ဖိုးထားပြီး အားပေးနေမယ်။</p>
+<p>ကိုယ်တို့ရဲ့ ဇာတ်လမ်းလေးကို အမှတ်တရကောင်းတွေနဲ့ တစ်နေ့ချင်း ဆက်ရေးသွားကြရအောင်။</p>
+<p><strong>ချစ်ခြင်းများစွာဖြင့်၊<br>Hein Yar Zar Oo ♡</strong></p>
+</div>
+</section>
+<section id="counter" class="counter">
+<h2 class="section-title">Our Special Day</h2>
+<p class="section-intro">နှစ်ယောက်အတွက် အထူးနေ့ရက်လေးကို ရွေးပြီး အတူဖြတ်သန်းခဲ့တဲ့ရက်တွေကို ကြည့်နိုင်ပါတယ်။</p>
+<div class="card">
+<label for="startDate">အမှတ်တရနေ့ကို ရွေးပါ</label><br><br>
+<input id="startDate" type="date" aria-label="Our special date">
+<div id="days" class="counter-output">နေ့ရက်လေး ရွေးပေးပါ 💞</div>
+<p id="dateNote" style="color:#95667b;font-size:.9rem">ရက်တွက်ဖို့ ရွေးထားတဲ့နေ့ကို ဒီဖုန်းရဲ့ browser မှာပဲ အသုံးပြုပါတယ်။</p>
+</div>
+</section>
+<section id="memories">
+<h2 class="section-title">Our Memories</h2>
+<p class="section-intro">ကိုယ်တို့နှစ်ယောက်ရဲ့ ဓာတ်ပုံလေးတွေကို ဒီနေရာမှာ ထည့်ပြီး အမှတ်တရ Gallery လုပ်နိုင်ပါတယ်။ ပုံတွေကို ဒီ browser ထဲမှာပဲ ယာယီပြပေးမှာပါ။</p>
+<div class="gallery" id="gallery">
+<label class="photo" for="photoInput"><span>📷</span><strong>ဓာတ်ပုံထည့်ရန်</strong><small>ဖုန်းထဲက ဓာတ်ပုံရွေးပါ</small></label>
+<div class="photo"><span>🌸</span><strong>Our Sweet Moments</strong><small>အကြိုက်ဆုံးအမှတ်တရပုံလေး ထည့်ပါ</small></div>
+</div>
+<input id="photoInput" type="file" accept="image/*" multiple>
+<p style="text-align:center;margin-top:18px"><button class="btn secondary" id="clearPhotos" type="button">ထည့်ထားတဲ့ပုံတွေ ရှင်းမယ်</button></p>
+</section>
+<section id="promise" class="promise">
+<h2 class="section-title">A Little Promise</h2>
+<div class="letter">
+<div class="big-heart">🌹</div>
+<p>အချစ်ဆိုတာ တစ်ယောက်ကိုတစ်ယောက် ပိုင်ဆိုင်ဖို့ပဲ မဟုတ်ဘူး။ ကိုယ့်ကိုယ်ကိုယ်လည်း တန်ဖိုးထားရင်း၊ တစ်ယောက်ရဲ့ အိပ်မက်နဲ့ နယ်နိမိတ်တွေကိုလည်း လေးစားပေးဖို့ပါ။</p>
+<p>ကိုယ်တို့နှစ်ယောက်ရဲ့ နေ့ရက်တွေမှာ ရိုးသားမှု၊ ယုံကြည်မှု၊ ကြင်နာမှုနဲ့ ရယ်မောစရာလေးတွေ ပိုများလာပါစေ။</p>
+<button class="btn" id="heartsBtn" type="button">ချစ်ခြင်းလေးတွေ ပို့မယ် 💕</button>
+</div>
+</section>
+</main>
+<footer>
+<div style="font-size:1.4rem">♡</div>
+Made with love for Hein Yar Zar Oo &amp; Khin Myoet Yee<br>
+<small>Every love story is special. This one is ours. 💗</small>
+</footer>
+<button class="floating" id="topBtn" aria-label="Back to top" title="အပေါ်သို့">↑</button>
+<script>
+const dateInput=document.getElementById('startDate');
+const days=document.getElementById('days');
+function updateDays(){
+ if(!dateInput.value){days.textContent='နေ့ရက်လေး ရွေးပေးပါ 💞';return;}
+ const start=new Date(dateInput.value+'T00:00:00');
+ const now=new Date();now.setHours(0,0,0,0);
+ const diff=Math.floor((now-start)/86400000);
+ if(diff<0){days.textContent='အဲဒီနေ့လေး မရောက်သေးပါဘူး 💗';}
+ else{days.textContent=`${diff+1} ရက်မြောက် အမှတ်တရနေ့ 💖`;document.getElementById('dateNote').textContent=`${dateInput.value} ကစပြီး ဒီနေ့အထိ ရက်တွက်ထားပါတယ်။`;}
+}
+dateInput.addEventListener('change',updateDays);
+document.getElementById('photoInput').addEventListener('change',e=>{
+ const files=Array.from(e.target.files||[]);const gallery=document.getElementById('gallery');
+ files.forEach(file=>{
+  if(!file.type.startsWith('image/'))return;
+  const reader=new FileReader();
+  reader.onload=()=>{
+   const wrap=document.createElement('div');wrap.className='photo';
+   const img=document.createElement('img');img.src=reader.result;img.alt='Couple memory photo';
+   wrap.appendChild(img);gallery.appendChild(wrap);
+  };
+  reader.readAsDataURL(file);
+ });
+ e.target.value='';
+});
+document.getElementById('clearPhotos').addEventListener('click',()=>{
+ const gallery=document.getElementById('gallery');
+ gallery.querySelectorAll('img').forEach(img=>img.parentElement.remove());
+});
+function hearts(){
+ const symbols=['💗','💕','💖','💘','🌸','♥'];
+ for(let i=0;i<18;i++){
+  const el=document.createElement('span');el.className='heart';
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+'vw';el.style.bottom='-30px';
+  el.style.fontSize=(18+Math.random()*20)+'px';
+  el.style.animationDelay=(Math.random()*.8)+'s';
+  document.body.appendChild(el);setTimeout(()=>el.remove(),3500);
+ }
+}
+document.getElementById('heartsBtn').addEventListener('click',hearts);
+document.getElementById('topBtn').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
